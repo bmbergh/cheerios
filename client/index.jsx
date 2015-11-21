@@ -32,9 +32,16 @@ var Main = React.createClass({
 	},
 
 	getItemNodes: function() {
-		return this.state.items.map(function(item){
-			return (<li>{item}</li>)
-		})
+		return this.state.items.map(function(item, idx){
+			if(idx == this.state.items.length -1){
+				console.log(this.state.items.length);
+				return (<li>{item}</li>);
+			})
+
+		}else{
+
+			return item;
+		}
 	},
 
 	addItemToState: function(item){
@@ -48,3 +55,15 @@ var Main = React.createClass({
 });
 
 ReactDOM.render(<Main />, document.getElementById('app'));
+
+
+
+
+
+
+
+
+
+
+
+
