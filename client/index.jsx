@@ -25,23 +25,16 @@ var Main = React.createClass({
 
 	render: function(){
 		return (
-			<ul>
-				{this.getItemNodes()}
-			</ul>
+				<ul>
+					{this.getItemNodes()}
+				</ul>
 		);
 	},
 
 	getItemNodes: function() {
-		return this.state.items.map(function(item, idx){
-			if(idx == this.state.items.length -1){
-				console.log(this.state.items.length);
-				return (<li>{item}</li>);
-			})
-
-		}else{
-
-			return item;
-		}
+		return this.state.items.map(function(item){
+			return (<li>{item}</li>)
+		})
 	},
 
 	addItemToState: function(item){
@@ -55,6 +48,25 @@ var Main = React.createClass({
 });
 
 ReactDOM.render(<Main />, document.getElementById('app'));
+
+var Photo = React.createClass({
+
+  render: function() {
+    return (
+      <div className='heart'>
+        <img src={this.props.src} />
+       
+      </div>
+    );
+  }
+});
+
+React.render(<Photo src='/svg/cheeriosLogoOrange.svg' />, document.getElementById('heartBeat'));
+
+
+
+
+
 
 
 

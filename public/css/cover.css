@@ -33,11 +33,14 @@ a:hover {
 html,
 body {
   height: 100%;
-  background:url('../images/swimHealth3.jpg')no-repeat;
   /*background-color: #333;*/
+}
+.homepage{
+   background:url('../images/swimHealth3.jpg')no-repeat;
 }
 body {
   color: #fff;
+  background-color: #18314F;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   box-shadow: inset 0 0 100px rgba(0,0,0,.5);
@@ -130,6 +133,27 @@ body {
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
+}
+/*
+*Heart Animation
+*/
+.heart{
+    width:200px;
+    height:200px;
+    margin:40px auto;
+    display:block;
+    animation: heartbeat 1s infinite;
+    -webkit-animation-delay: 5s; /* Chrome, Safari, Opera */
+    animation-delay: 5s;
+}
+
+@keyframes heartbeat {
+    
+    92% { transform: scale(1, 1);}
+    94% {  transform: scale(1.2, 1.2); }
+    96% {  transform: scale(1, 1); }
+    98% {  transform: scale(1.1, 1.1); }
+    100% { transform: scale(1, 1);}
 }
 
 

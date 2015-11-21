@@ -100,10 +100,10 @@ server.listen(port, function(){
 
 
 //Socket connection
-io.on('connection', function (socket){
+// io.on('connection', function (socket){
 	
-	require('./server/cheerio.js')(socket);
-	console.log("Socket IO is connected");
+// 	require('./server/cheerio.js')(socket);
+// 	console.log("Socket IO is connected");
 
-});
+// });
 

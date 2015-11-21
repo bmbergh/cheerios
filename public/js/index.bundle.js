@@ -101,6 +101,20 @@
 	
 	ReactDOM.render(React.createElement(Main, null), document.getElementById('app'));
 	
+	var Photo = React.createClass({
+		displayName: 'Photo',
+	
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'heart' },
+				React.createElement('img', { src: this.props.src })
+			);
+		}
+	});
+	
+	React.render(React.createElement(Photo, { src: '/svg/cheeriosLogoOrange.svg' }), document.getElementById('heartBeat'));
+	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/brandybergh/Desktop/cheerios/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
